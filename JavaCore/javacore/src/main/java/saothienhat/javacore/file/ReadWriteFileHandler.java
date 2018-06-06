@@ -37,5 +37,29 @@ public class ReadWriteFileHandler {
         }
     }
   }
+  
+  public void writeFile(String fileName, String content) {
+    BufferedWriter bw = null;
+    FileWriter fw = null;
+    try {
+      fw = new FileWriter(fileName);
+      bw = new BufferedWriter(fw);
+      bw.write(content);
+      System.out.println("Done !");
+    } catch (IOException e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        if (bw != null)
+          bw.close();
+        if (fw != null)
+          fw.close();
+      } catch (IOException ex) {
+        ex.printStackTrace();
+
+      }
+
+    }
+  }
 
 }
