@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jmh.version>1.21</jmh.version>
   </properties>
 
   <dependencies>
@@ -21,5 +22,18 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->
+	<dependency>
+	    <groupId>org.openjdk.jmh</groupId>
+	    <artifactId>jmh-core</artifactId>
+	    <version>${jmh.version}</version>
+	</dependency>
+	<dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>${jmh.version}</version>
+        </dependency>
+	    
   </dependencies>
 </project>
