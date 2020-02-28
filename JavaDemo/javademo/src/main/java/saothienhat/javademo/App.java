@@ -14,7 +14,7 @@ public class App
         
 //        testForLoopPerformance();
         
-        testJMHBenchmark();
+//        testJMHBenchmark();
     }
 
 	private static void testForLoopPerformance() {
